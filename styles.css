@@ -28,7 +28,7 @@ body {
   height: 100vh;
   height: 100dvh; /* 모바일 주소창 대응 */
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 }
@@ -87,7 +87,7 @@ body {
     font-family: "Nanum Gothic Coding", monospace;
 }
 
-.cover-list li {
+.list {
     list-style-position: inside;
     list-style-type: circle;
     padding: 0;
@@ -144,7 +144,7 @@ body {
 }
 
 #project-title {
-    margin: 30px auto;
+    margin: 30px auto 30px 30px;
 }
 
 .link-area {
@@ -172,10 +172,72 @@ body {
     color: #0f0f0f;
 }
 
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px 30px auto;
+    gap: 40px;
+}
 
-/* 움직임 줄이기 설정을 쓰는 사용자 배려 */
+#contact-title {
+    
+}
+
+.contact-list {
+    margin-left: 50px;
+    font-family: "Nanum Gothic Coding", monospace;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+}
+
+@media (max-width: 1000px) {
+
+
+    .cover-grid-container {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin: auto;
+    }
+
+    #main-title {
+        margin-top: 0px;
+
+    }
+
+    .page h2 {
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 1;
+    }
+
+    #project-title {
+        margin: 70px auto 10px auto;
+    }
+
+    .icon-img {
+        width: 100px;
+    }
+
+    .link-area {
+        gap: 50px;
+    }
+
+    #contact-title {
+        margin: 10px auto 70px auto;
+    }
+
+    .contact-container {
+        margin: 10px;
+    }
+    
+
+
 }
